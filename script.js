@@ -63,6 +63,10 @@ window.addEventListener('load', () => {
 		task_content_el.classList.add('content');
 
 		task_el.appendChild(task_content_el);
+		if (!task) {
+			       alert("Please fill out task");
+			       return;
+			     }
 
 		const task_input_el = document.createElement('input');
 		task_input_el.classList.add('text');
