@@ -139,7 +139,11 @@ main {
 #new-task-submit:active{
     opacity: 0.60;
 }
+
 .task .actions .edit .checkbox{
+
+.task .actions .edit{
+
     background-image: linear-gradient(to right, var(--pink), var(--purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -148,6 +152,7 @@ main {
 .task .actions .delete{
     color: crimson;
     font-size: 12px;
+
 }
 /* CSS for completed tasks */
 #completed .task {
@@ -164,3 +169,6 @@ main {
     margin: 0 0.5rem;
     background-color: ;
 }
+
+}
+

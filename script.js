@@ -50,7 +50,9 @@ window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
 	const list_el = document.querySelector("#tasks");
+
 	const completed_el = document.querySelector("#completed");
+
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
@@ -88,6 +90,7 @@ window.addEventListener('load', () => {
 		task_delete_el.classList.add('delete');
 		task_delete_el.innerText = 'Delete';
 
+
 		//checkbox for task completed
 		const task_completed_el = document.createElement('input');
 		task_completed_el.classList.add('checkbox');
@@ -98,6 +101,10 @@ window.addEventListener('load', () => {
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
 		task_actions_el.appendChild(task_completed_el);
+=======
+		task_actions_el.appendChild(task_edit_el);
+		task_actions_el.appendChild(task_delete_el);
+
 
 		task_el.appendChild(task_actions_el);
 
@@ -120,6 +127,7 @@ window.addEventListener('load', () => {
 			list_el.removeChild(task_el);
 		});
 
+
 		//checkbox for task completed
 		task_completed_el.addEventListener('change', (e) => {
 			if (task_completed_el.checked) {
@@ -131,5 +139,6 @@ window.addEventListener('load', () => {
 				completed_el.removeChild(task_el);
 			}
 		});
+
 	});
 });
