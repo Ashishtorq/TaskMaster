@@ -44,7 +44,7 @@ h1 {
 
 input,
 button {
-    appearance: none;
+    /* appearance: none; */
     border: none;
     outline: none;
     background: none;
@@ -139,7 +139,11 @@ main {
 #new-task-submit:active{
     opacity: 0.60;
 }
+
+.task .actions .edit .checkbox{
+
 .task .actions .edit{
+
     background-image: linear-gradient(to right, var(--pink), var(--purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -148,4 +152,23 @@ main {
 .task .actions .delete{
     color: crimson;
     font-size: 12px;
+
 }
+/* CSS for completed tasks */
+#completed .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+.checkbox {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    background-color: ;
+}
+
+}
+

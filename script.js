@@ -51,6 +51,9 @@ window.addEventListener('load', () => {
 	const input = document.querySelector("#new-task-input");
 	const list_el = document.querySelector("#tasks");
 
+	const completed_el = document.querySelector("#completed");
+
+
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 
@@ -87,8 +90,21 @@ window.addEventListener('load', () => {
 		task_delete_el.classList.add('delete');
 		task_delete_el.innerText = 'Delete';
 
+
+		//checkbox for task completed
+		const task_completed_el = document.createElement('input');
+		task_completed_el.classList.add('checkbox');
+		task_completed_el.type = 'checkbox';
+
+
+
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
+		task_actions_el.appendChild(task_completed_el);
+=======
+		task_actions_el.appendChild(task_edit_el);
+		task_actions_el.appendChild(task_delete_el);
+
 
 		task_el.appendChild(task_actions_el);
 
@@ -110,5 +126,19 @@ window.addEventListener('load', () => {
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
 		});
+
+
+		//checkbox for task completed
+		task_completed_el.addEventListener('change', (e) => {
+			if (task_completed_el.checked) {
+				completed_el.appendChild(task_el);
+				list_el.removeChild(task_el);
+			}
+			else if (!task_completed_el.checked) {
+				list_el.appendChild(task_el);
+				completed_el.removeChild(task_el);
+			}
+		});
+
 	});
 });
