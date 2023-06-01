@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
 		task_actions_el.appendChild(task_completed_el);
-=======
+
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
 
