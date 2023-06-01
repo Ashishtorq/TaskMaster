@@ -142,3 +142,4 @@ window.addEventListener('load', () => {
 
 	});
 });
+// github pages error check
